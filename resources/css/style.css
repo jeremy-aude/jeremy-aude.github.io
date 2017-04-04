@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+  font-family: Ubuntu;
+  background-color: gray;
+}
+
+/* unvisited link */
+a:link {
+  text-decoration: none;
+  color: #990000;
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+  color: #990000;
+}
+
+/* mouseover link */
+a:hover {
+  text-decoration: underline;
+}

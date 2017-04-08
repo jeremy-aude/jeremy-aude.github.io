@@ -8,9 +8,11 @@ nav {
   list-style-type: none;
   font-size: 18px;
 }
-
+#process,
+#us {
+  background-color: white;
+}
 #page-header {
-  background-image: url("../images/the-flatiron-building.png");
   color: white
 }
 
@@ -32,6 +34,8 @@ h3 {
 .new-york {
   color: white;
   background-image: url("../images/the-flatiron-building.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 footer {

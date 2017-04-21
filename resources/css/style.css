@@ -5,19 +5,26 @@ body {
   background-color: gray;
 }
 
-/* unvisited link */
-a:link {
+/* Link formatting */
+a {
   text-decoration: none;
   color: #990000;
 }
 
-/* visited link */
-a:visited {
-  text-decoration: none;
-  color: #990000;
-}
-
-/* mouseover link */
+/* Mouseover formatting */
 a:hover {
   text-decoration: underline;
+}
+
+#codecademy {
+  border-style:solid;
+  border-color: darkgrey;
+  height: 800px;
+  width: 400px;
+  overflow: scroll;
+  padding: 10px;
+}
+
+.stoney {
+  display: inline-block;
 }

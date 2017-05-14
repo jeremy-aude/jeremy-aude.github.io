@@ -1,52 +1,326 @@
 
-/* Test styles */
+/* ------------------------------------------------------------------ */
+/* Site-wide styling                                                  */
+/* ------------------------------------------------------------------ */
 
-.red-bg {
-  background-color: red;
-}
-
-
-
-/* Import font from Google */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-
-/* Global styling */
-html {
-  font-size: 16px;
-  font-family: Roboto, sans-serif;
-  color: darkgrey;
-}
-
-body {
-  background-color: #F5F5F5
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-}
-
-li {
-  padding: 0 1rem 0 1rem;
-}
-
-/* Footer styling */
-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 0 3rem 1.5rem;
-}
-
-
-/* Mobile styling */
-@media only screen and (max-width: 480px) {
-  nav {
-    display: none;
+  html {
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    color: #4a4a4a;
   }
-}
+
+  body {
+    background-color: #F3F5F5
+  }
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: #4a4a4a;
+  }
+
+  /* Some elements on the page need a different background */
+  .alt-bg-color {
+    background-color: #d8d8d8
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* Import Roboto font from Google */
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1rem 0;
+  }
+
+  h4 {
+    padding: 0.5rem 1rem;
+  }
+
+  button {
+    background-color: #4a4a4a;
+    border: none;
+    color: white;
+    padding: 0.5rem 0;
+    margin: 2.5rem 0;
+  }
+
+/* ------------------------------------------------------------------ */
+/* Header and footer container styling                                */
+/* ------------------------------------------------------------------ */
+
+  /* The header and footer both share some common properties */
+  header,
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1.5rem;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+
+  nav li {
+    padding: 0 0.5rem;
+  }
+
+  /* Header needs to be taller and font larger */
+  header {
+    height: 4rem;
+    font-size: 1.25rem;
+  }
+
+  header .logo {
+    height: 3rem;
+    width: auto;
+  }
+
+  /* Make footer text smaller than base font size */
+  footer {
+    font-size: 0.75rem;
+    height: 4rem;
+  }
+
+  /* Container for the company logo and name */
+  .company {
+    display: flex;
+    align-items: center;
+  }
+
+  /* The word "academy" should be lighter grey */
+  .academy {
+    color: darkgrey;
+  }
+
+
+/* ------------------------------------------------------------------ */
+/* Common styling                                                     */
+/* ------------------------------------------------------------------ */
+
+  .large-container {
+    display: flex;
+  }
+
+  .large-picture img {
+    width: 100%;
+    height: auto;
+    }
+
+  .large-box {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 2rem 1.5rem;
+  }
+
+  .large-header {
+    padding: 1.5rem 0;
+  }
+
+  .quotation {
+    padding-top: 1.5rem;
+  }
+
+  .small-box {
+    display: flex;
+    flex-direction: column;
+    width: 423px;
+    justify-content: center;
+  }
+
+  .small-article {
+    display: flex;
+    align-items: center;
+  }
+
+  .small-article-image {
+    width: 35%;
+    padding: 1rem;
+  }
+
+  .small-article-text {
+    padding: .5rem 0;
+  }
+
+  .small-box a {
+    color: #5495e1
+  }
+
+  .section-header {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  h1.thesis-header {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+
+
+/* ------------------------------------------------------------------ */
+/* Course list container styling                                      */
+/* ------------------------------------------------------------------ */
+
+  .course-container {
+    background-color: #F3F5F5;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .subjects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .course-subject {
+    padding: 1rem;
+  }
+
+  .course-overview {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .course-image {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+
+  .course-list {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+/* ------------------------------------------------------------------ */
+/* Responsive styling                                                 */
+/* ------------------------------------------------------------------ */
+
+  /* Mobile styling */
+  @media only screen and (max-width: 480px) {
+    .desktop,
+    .headline .desktop-info,
+    .desktop-nav,
+    .large-box,
+    .course-image,
+    .course-list,
+    .courses-text
+     {
+      display: none;
+    }
+
+    .mobile-nav {
+      display: flex;
+      justify-content: center;
+    }
+
+    .mobile-nav li {
+      padding: 1rem;
+    }
+
+    .rectangle {
+      display: block;
+      height: 180px;
+      background-color: #9c9c9c;
+    }
+
+    .small-article {
+      flex-direction: column;
+    }
+
+    .alt-bg-color {
+      background-color: inherit;
+    }
+
+    .subjects {
+      flex-direction: column;
+    }
+
+    .course-container {
+      width: auto;
+      background-color: #d8d8d8;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header {
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+    }
+
+    button {
+      background-color: #9c9c9c;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .small-article {
+      align-items: flex-start;
+      padding-top: 1rem;
+    }
+
+    .small-box {
+      padding: 0 1rem;
+    }
+
+    .small-article-image {
+      padding: 0 0;
+      width: 100%;
+    }
+
+    h1.thesis-header  {
+      padding-bottom: 2rem;
+    }
+
+    .mobile.video {
+      padding-bottom: 1.5rem;
+    }
+
+  }
+
+
+  /* Desktop styling */
+  @media only screen and (min-width: 480px) {
+
+    .mobile-nav {
+      display: none;
+    }
+
+    .rectangle {
+      display: none;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    button {
+      width: 80%;
+    }
+  }
